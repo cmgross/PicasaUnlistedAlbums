@@ -1,0 +1,19 @@
+﻿@model IEnumerable<PicasaUnlistedAlbums.Models.PicasaAlbum>
+
+<table class="table table-striped table-hover table-condensed" style="text-align: center">
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                <a href="@item.Link" target="_blank">
+                    <img src="@item.Thumbnail" alt="Album Cover" />
+                </a>
+            </td>
+
+            <td>
+                <a href="@item.Link" target="_blank">@item.Title</a>
+            </td>
+
+        </tr>
+    }
+</table>
